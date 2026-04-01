@@ -1,6 +1,7 @@
 # Voice Control Cursor
 
 This project currently includes:
+
 - A speech recognition runner in app/main.py
 - An LLM graph snippet in app/graph.py
 - Optional MongoDB via Docker in docker-compose.yml
@@ -36,6 +37,7 @@ From the project root, with the virtual environment active:
 python app/main.py
 
 What to expect:
+
 - The app prints: Say something!
 - Speak into your microphone
 - It prints recognized text or a friendly error message
@@ -66,21 +68,26 @@ Note: graph.py currently defines graph-related components but does not include a
 ## Troubleshooting
 
 1. SpeechRecognition module missing
+
 - Install:
   pip install SpeechRecognition
 
 2. Microphone/backend errors on Windows
+
 - Install PyAudio:
   pip install PyAudio
 - If PyAudio install fails from source, use a compatible wheel for your Python version.
 
 3. No speech detected
+
 - Speak within 10 seconds because timeout and phrase time limit are set in app/main.py.
 
 4. Could not understand audio
+
 - Try a quieter room and speak more clearly.
 
 5. Request error from Google Speech Recognition
+
 - Check internet connection and retry.
 
 ## File References
